@@ -10,25 +10,26 @@ void main() {
 
 class MyApp extends StatelessWidget {
   final ThemeChange themeChange = Get.put(ThemeChange());
-   MyApp({super.key});
+
+  MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Obx(() {
       return GetMaterialApp(
-        theme: themeChange.isDark.value ? ThemeData.dark():ThemeData.light(),
+        theme: themeChange.isDark.value ? ThemeData.dark() : ThemeData.light(),
         debugShowCheckedModeBanner: false,
         home: ScreenFirst(),
         getPages: [
           GetPage(
-            name: '/home',
-            page: () => ScreenFirst(),
-          ),
+              name: '/home',
+              page: () => ScreenFirst(),
+              transition: Transition.fadeIn),
           GetPage(
-            name: '/second',
-            page: () => ScreenSec(),
-          )
+              name: '/second',
+              page: () => ScreenSec(),
+              transition: Transition.fadeIn)
         ],
       );
     });
