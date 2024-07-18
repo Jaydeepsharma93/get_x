@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../controller/themechange.dart';
+
 class ScreenFirst extends StatelessWidget {
-  const ScreenFirst({super.key});
+  final ThemeChange themeChange = Get.find();
+   ScreenFirst({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,6 +13,13 @@ class ScreenFirst extends StatelessWidget {
       appBar: AppBar(
         title: Text('First Page'),
         centerTitle: true,
+        actions: [
+          Obx(
+            () =>  Switch(value:themeChange.isDark.value, onChanged: (value) {
+              themeChange.changeTheme(value);
+            },),
+          )
+        ],
       ),
       body: Center(
         child: IconButton(onPressed: () {
