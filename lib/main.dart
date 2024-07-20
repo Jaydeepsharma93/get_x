@@ -25,11 +25,11 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: '/home',
               page: () => ScreenFirst(),
-              transition: Transition.fadeIn),
+              transition: Transition.cupertino),
           GetPage(
               name: '/second',
               page: () => ScreenSec(),
-              transition: Transition.fadeIn)
+              transition: Transition.cupertino)
         ],
       );
     });
