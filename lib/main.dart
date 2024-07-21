@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_x/Quizapp/controller/quizacheck.dart';
 import 'package:get_x/Quizapp/view/Quizapp.dart';
 import 'package:get_x/apicall/controller/getapi.dart';
 import 'package:get_x/apicall/view/display.dart';
@@ -14,6 +15,7 @@ void main() {
 class MyApp extends StatelessWidget {
   final ThemeChange themeChange = Get.put(ThemeChange());
   final ApiCalling apiCalling = Get.put(ApiCalling());
+  final QuizCheck quizCheck = Get.put(QuizCheck());
 
   MyApp({super.key});
 
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
               transition: Transition.cupertino),
           GetPage(
               name: '/second',
-              page: () => ScreenSec(),
+              page: () => const ScreenSec(),
               transition: Transition.cupertino),
           GetPage(
             name: '/Display',
@@ -40,7 +42,7 @@ class MyApp extends StatelessWidget {
           ),
           GetPage(
             name: '/QuizApp',
-            page:
+            page: () => QuizApp(),
           )
         ],
       );

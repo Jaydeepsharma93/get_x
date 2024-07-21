@@ -25,17 +25,11 @@ class QuizCheck extends GetxController{
       currentQusIndex.value++;
     }
   }
-  void _nextQuestion() {
-    if (currentQusIndex.value + 1 >= _questions.length) {
-      currentQusIndex.value = 0; // Loop through questions
-    } else {
-      currentQusIndex.value++;
-    }
-  }
   void _resetQuiz() {
     currentQusIndex.value = 0;
     correctAns.value = 0;
     wrongAns.value = 0;
+    isComplete(false);
   }
   void restartQuiz() {
     _resetQuiz();
