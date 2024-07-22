@@ -37,7 +37,8 @@
 <img src="https://github.com/user-attachments/assets/3386e3d2-8e05-49ac-9971-5790fcb54335" width = 32%>
 <img src="https://github.com/user-attachments/assets/5f472ff3-1e43-4f8d-a01d-28312236a9d9" width = 32%>
 
-<video src="https://github.com/user-attachments/assets/4f13b7e3-e803-4898-99f2-00478f66b5f9" width = 32%>
+
+<video src="https://github.com/user-attachments/assets/5bfac43f-c671-4676-a916-b5cf4ceb4cd0" width = 32%>
   
 </div>
 <div> 
