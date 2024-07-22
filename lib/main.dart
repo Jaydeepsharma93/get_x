@@ -8,6 +8,11 @@ import 'package:get_x/nevigate%20or%20theme%20change/controller/themechange.dart
 import 'package:get_x/nevigate%20or%20theme%20change/view/1screen.dart';
 import 'package:get_x/nevigate%20or%20theme%20change/view/2screen.dart';
 
+import 'add todo/controller/addTodo.dart';
+import 'add todo/view/viewScreen.dart';
+import 'formvalidation/controller/validationcontroller.dart';
+import 'formvalidation/view/loginview.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -16,6 +21,8 @@ class MyApp extends StatelessWidget {
   final ThemeChange themeChange = Get.put(ThemeChange());
   final ApiCalling apiCalling = Get.put(ApiCalling());
   final QuizCheck quizCheck = Get.put(QuizCheck());
+  final AddTodo addTodoController = Get.put(AddTodo());
+  final ValidationController validationController = Get.put(ValidationController());
 
   MyApp({super.key});
 
@@ -26,7 +33,7 @@ class MyApp extends StatelessWidget {
       return GetMaterialApp(
         theme: themeChange.isDark.value ? ThemeData.dark() : ThemeData.light(),
         debugShowCheckedModeBanner: false,
-        home: QuizApp(),
+        home: LoginView(),
         getPages: [
           GetPage(
               name: '/home',
@@ -43,6 +50,14 @@ class MyApp extends StatelessWidget {
           GetPage(
             name: '/QuizApp',
             page: () => QuizApp(),
+          ),
+          GetPage(
+            name: '/TodoView',
+            page: () => TodoView(),
+          ),
+          GetPage(
+            name: '/LoginView',
+            page: () => LoginView(),
           )
         ],
       );
